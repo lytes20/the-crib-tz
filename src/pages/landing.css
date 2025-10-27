@@ -80,29 +80,17 @@ img {
 
 .landing-main {
   height: 100vh;
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(12, 1fr);
+  display: flex;
+  flex-direction: column;
   background-image: url(../assets/images/Dar_es_Salaam_-_Posta.jpg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
   background-attachment: fixed;
-  align-items: center;
-}
-
-.image-container {
-  grid-row-start: 1;
-  grid-row-end: -1;
-  grid-column-start: 1;
-  grid-column-end: -1;
+  justify-content: center;
 }
 
 .karibu {
-  grid-row-start: 1;
-  grid-row-end: -1;
-  grid-column-start: 2;
-  grid-column-end: 10;
 }
 
 .karibu-text {
@@ -128,4 +116,41 @@ h1.karibu-text {
   font-size: 0.95rem;
   color: #333;
   z-index: 2;
+}
+
+.scroll-down-icon {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.scroll-down-icon svg {
+  animation: scroll-bounce 1.2s infinite cubic-bezier(0.41, 0.55, 0.51, 1.11);
+}
+
+@keyframes scroll-bounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 767px) {
+  .landing-main {
+    background-image: none !important;
+    background-color: #f6f6f6;
+  }
+  .image-credit {
+    display: none !important;
+  }
 }

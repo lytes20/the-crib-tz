@@ -12,6 +12,24 @@ function Landing() {
         <div className="image-credit">
           <ImageCredit />
         </div>
+        {/* Animated down arrow for scroll prompt */}
+        <div className="scroll-down-icon">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 5v14m0 0l-7-7m7 7l7-7"
+              stroke="#333"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </div>
       </div>
       <div className="landing-body">
         <section>
